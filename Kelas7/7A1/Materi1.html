@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 1</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu melihat suhu di daerah pegunungan bernilai di bawah nol?</li>
+<li>Saat memasak atau berbelanja, kapan kamu menggunakan pecahan seperti ½ atau ¾?</li>
+<li>Mengapa menurutmu kita perlu memahami bilangan dalam kehidupan sehari-hari?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+
+<div class="content" id="kontekstual">
+<ol>
+<li>Membaca suhu harian, misalnya suhu pagi −2°C dan siang 5°C.</li>
+<li>Menghitung bahan masakan, seperti ½ gelas gula atau ¾ sendok garam.</li>
+<li>Menentukan diskon atau persentase saat berbelanja.</li>
+<li>Memahami ketinggian dan kedalaman, seperti di atas dan di bawah permukaan laut.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+
+<div class="content" id="tujuan">
+<ol>
+<li>Memahami konsep bilangan bulat dan bilangan pecahan.</li>
+<li>Mengidentifikasi penggunaan bilangan bulat dan pecahan dalam kehidupan sehari-hari.</li>
+<li>Merefleksikan pentingnya memahami bilangan dalam konteks nyata.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+
+<div class="content" id="aktivitas">
+<ol>
+<li>Mengamati ilustrasi situasi nyata yang melibatkan bilangan bulat dan pecahan.</li>
+<li>Berdiskusi kelompok untuk menentukan jenis bilangan pada setiap situasi.</li>
+<li>Menuliskan contoh penggunaan bilangan bulat dan pecahan dari pengalaman sehari-hari.</li>
+<li>Mengerjakan latihan singkat secara individu berbasis konteks kehidupan nyata.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+
+<div class="content" id="konsep">
+<b>Bilangan Bulat</b>
+<ul>
+<li>Bilangan negatif: … −3, −2, −1</li>
+<li>Nol (0)</li>
+<li>Bilangan positif: 1, 2, 3, …</li>
+</ul>
+
+Contoh:
+
+<ul>
+<li>Suhu udara: −5°C</li>
+<li>Skor permainan: −2 poin</li>
+<li>Kedalaman laut: −100 meter</li>
+</ul>
+
+<b>Bilangan Pecahan</b>
+
+<ul>
+<li>Pecahan biasa: ½, ¾</li>
+<li>Pecahan campuran: 2½</li>
+<li>Desimal: 0,5 ; 1,25</li>
+<li>Persen: 25%, 75%</li>
+</ul>
+
+Contoh:
+
+<ul>
+<li>Resep: ½ sendok teh garam</li>
+<li>Diskon: 25%</li>
+<li>Waktu: 1½ jam</li>
+</ul>
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+
+<div class="content" id="contoh">
+<b>Contoh 1 (Bilangan Bulat)</b><br>
+Suhu di kota A adalah 5°C, sedangkan di kota B −3°C.  
+Selisih suhu = 5 − (−3) = 8°C.
+
+<br><br>
+
+<b>Contoh 2 (Bilangan Pecahan)</b><br>
+Resep membutuhkan ¾ gelas gula. Jika dibuat setengah resep:  
+½ × ¾ = ⅜ gelas gula.
+
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+
+<div class="content" id="latihan">
+<b>Bilangan Bulat</b>
+<ol>
+<li>
+Seorang penyelam berada di −20 m dan naik ke −5 m. Berapa meter ia naik?
+Penyelesaian:
+Posisi awal penyelam adalah −20 m
+Posisi akhir penyelam adalah −5 m
+Kenaikan dihitung dengan selisih posisi akhir dan awal
+Kenaikan = −5 − (−20)
+Kenaikan = −5 + 20
+Kenaikan = 15
+Penyelam naik sejauh 15 meter
+</li>
+<li>
+Suhu pagi −2°C dan siang 6°C. Berapa kenaikan suhu?
+Penyelesaian:
+Suhu pagi adalah −2°C
+Suhu siang adalah 6°C
+Kenaikan suhu dihitung dengan selisih suhu siang dan pagi
+Kenaikan suhu = 6 − (−2)
+Kenaikan suhu = 6 + 2
+Kenaikan suhu = 8
+Kenaikan suhu adalah 8°C
+</li>
+</ol>
+
+<b>Bilangan Pecahan</b>
+
+<ol>
+<li>
+Jika ⅔ liter air digunakan untuk satu tanaman, berapa liter untuk 3 tanaman?
+Penyelesaian:
+Air untuk satu tanaman adalah 2/3 liter
+Jumlah tanaman adalah 3
+Total air dihitung dengan perkalian
+Air = 3 × 2/3
+Air = 6/3
+Air = 2
+Total air yang diperlukan adalah 2 liter
+</li>
+<li>
+Diskon 20% dari Rp150.000. Berapa harga setelah diskon?
+Penyelesaian:
+Harga awal adalah Rp150.000
+Diskon adalah 20 persen
+Besar diskon dihitung dengan
+Diskon = 20/100 × 150000
+Diskon = 0,2 × 150000
+Diskon = 30000
+Harga setelah diskon
+Harga akhir = 150000 − 30000
+Harga akhir = 120000
+Harga setelah diskon adalah Rp120.000
+</li>
+</ol>
+</div>
+
+
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+
+<div class="content" id="refleksi">
+<ol>
+<li>Di mana kamu pernah menggunakan bilangan negatif dalam kehidupan sehari-hari?</li>
+<li>Mengapa pecahan penting saat memasak, berbelanja, atau berbagi?</li>
+<li>Bagaimana bilangan membantu kita membuat keputusan yang lebih baik?</li>
+</ol>
+</div>
+
+</div>
+</div>
+</body>
+</html>

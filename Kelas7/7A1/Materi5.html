@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 5</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+<div class="content" id="pemantik">
+<ol>
+  <li>Pernahkah kamu membagi kue atau pizza dengan temanmu agar setiap orang mendapat bagian yang sama?</li>
+  <li>Saat melihat jam, bagaimana cara memahami setengah jam atau seperempat jam?</li>
+  <li>Mengapa menurutmu pecahan sering digunakan saat berbagi sesuatu?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+<div class="content" id="kontekstual">
+<ol>
+  <li>Membagi kue, pizza, atau roti menjadi beberapa bagian yang sama.</li>
+  <li>Menentukan bagian waktu, seperti setengah jam atau seperempat jam.</li>
+  <li>Menghitung bagian uang saat menabung atau membelanjakan sebagian dari uang saku.</li>
+  <li>Mengamati bagian yang diarsir pada gambar atau benda yang dibagi sama besar.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+<div class="content" id="tujuan">
+<ol>
+  <li>Memahami konsep pecahan sebagai bagian dari keseluruhan.</li>
+  <li>Mengidentifikasi pecahan dalam berbagai konteks kehidupan sehari-hari.</li>
+  <li>Merefleksikan pentingnya memahami pecahan dalam pengambilan keputusan.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+<div class="content" id="aktivitas">
+<ol>
+  <li>Siswa mengamati gambar atau benda yang dibagi menjadi beberapa bagian sama besar.</li>
+  <li>Siswa berdiskusi dalam kelompok untuk menentukan bagian dari keseluruhan pada setiap gambar atau situasi.</li>
+  <li>Siswa menyebutkan pecahan yang sesuai dengan bagian yang ditunjukkan.</li>
+  <li>Siswa mengerjakan latihan singkat untuk mengidentifikasi pecahan dalam berbagai konteks sehari-hari.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+<div class="content" id="konsep">
+🔹 <strong>Apa itu Pecahan?</strong>
+
+Pecahan adalah bilangan yang menyatakan bagian dari suatu keseluruhan. Pecahan terdiri dari:
+
+Pembilang (angka di atas garis pecahan): menunjukkan jumlah bagian yang diambil.
+Penyebut (angka di bawah garis pecahan): menunjukkan jumlah bagian keseluruhan.
+
+Contoh:
+3/4 → artinya 3 dari 4 bagian yang sama besar.
+
+🔹 <strong>Representasi Pecahan</strong>
+
+Pecahan dapat direpresentasikan dalam berbagai bentuk:
+Gambar: seperti lingkaran atau persegi yang dibagi menjadi bagian-bagian.
+Situasi nyata: seperti membagi kue, waktu, uang, atau jarak.
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+<div class="content" id="contoh">
+<strong>✅ Contoh Soal 1: Pecahan dalam Gambar</strong><br><br>
+
+Sebuah lingkaran dibagi menjadi 8 bagian yang sama. Jika 5 bagian diarsir, berapa pecahan bagian yang diarsir?<br>
+Jawaban: 5/8<br><br>
+
+<strong>✅ Contoh Soal 2: Pecahan dalam Konteks</strong>
+
+Seorang anak membaca 3 dari 5 bab buku. Berapa bagian buku yang telah dibaca?
+
+Jawaban: 3/5
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+
+<div class="content" id="latihan">
+  <ol>
+    <li>
+      Sebuah pizza dibagi menjadi 6 bagian. Jika 2 bagian dimakan, berapa pecahan pizza yang dimakan?
+      Penyelesaian:
+      Banyak bagian yang dimakan adalah 2
+      Banyak seluruh bagian pizza adalah 6
+      Pecahan pizza yang dimakan adalah
+      2 = pembilang
+      6 = penyebut
+      Maka pecahan pizza yang dimakan adalah
+      2/6
+    </li>
+    <li>
+      Dalam sebuah kelas, 12 dari 30 siswa memakai kacamata. Berapa pecahan siswa yang memakai kacamata?
+      Penyelesaian:
+      Banyak siswa yang memakai kacamata adalah 12
+      Banyak seluruh siswa adalah 30
+      Pecahan siswa yang memakai kacamata adalah
+      12 = pembilang
+      30 = penyebut
+      Maka pecahan siswa yang memakai kacamata adalah
+      12/30
+    </li>
+    <li>
+      Gambarlah pecahan 2/4 dalam bentuk persegi yang dibagi menjadi 4 bagian.
+      Penyelesaian:
+      Penyebut 4 berarti persegi dibagi menjadi 4 bagian sama besar
+      Pembilang 2 berarti 2 bagian diarsir
+      Banyak bagian yang diarsir adalah
+      2 dari 4 bagian
+      Maka pecahan yang digambarkan adalah
+      2/4
+    </li>
+    <li>
+      Jika kamu memiliki Rp10.000 dan membelanjakan Rp2.500, berapa pecahan uang yang telah dibelanjakan?
+      Penyelesaian:
+      Uang yang dibelanjakan adalah 2.500
+      Uang seluruhnya adalah 10.000
+      Pecahan uang yang dibelanjakan adalah
+      2.500 = pembilang
+      10.000 = penyebut
+      Maka pecahan uang yang dibelanjakan adalah
+      2.500/10.000
+    </li>
+    <li>
+      Dalam perlombaan lari, seorang atlet telah menempuh 3/4 dari total jarak. Jika total jarak adalah 12 km, berapa km yang telah ditempuh?
+      Penyelesaian:
+      Pecahan jarak yang ditempuh adalah 3/4
+      Total jarak adalah 12 km
+      Jarak yang ditempuh adalah
+      3/4 × 12
+      = 3 × 12 / 4
+      = 36 / 4
+      = 9
+      Maka jarak yang telah ditempuh adalah
+      9 km
+    </li>
+    <li>
+      Seorang ibu membuat jus dari 2/3 liter air dan 1/3 liter sirup. Berapa total liter jus yang dibuat?
+      Penyelesaian:
+      Volume air adalah 2/3 liter
+      Volume sirup adalah 1/3 liter
+      Penyebut kedua pecahan sama
+      Jumlahkan pembilangnya
+      2/3 + 1/3
+      = (2 + 1) / 3
+      = 3 / 3
+      = 1
+      Maka total jus yang dibuat adalah
+      1 liter
+    </li>
+  </ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+<div class="content" id="refleksi">
+<ol>
+  <li>Dalam kehidupan sehari-hari, di mana kamu sering melihat atau menggunakan pecahan?</li>
+  <li>Mengapa penting memahami pecahan saat berbagi sesuatu?</li>
+  <li>Apa tantangan yang kamu hadapi saat memahami pecahan sebagai bagian dari keseluruhan?</li>
+</ol>
+Siswa dapat menuliskan jawaban mereka di buku catatan atau mendiskusikannya dalam kelompok kecil.
+</div>
+
+</div>
+</div>
+</body>
+</html>
